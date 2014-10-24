@@ -1,0 +1,174 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+@import "../sandstone/lib.less";
+
+// The big splash header with logo and video
+#fx10-splash {
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    min-height: 800px;
+    overflow: hidden;
+
+    .main-title {
+        font-size: 72px;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 40, 65, .25);
+        width: (@gridColumnWidth * 6) + (@gridGutterWidth * 5);
+        margin: 0 auto 40px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .video {
+        width: 780px;
+        height: 435px;
+        border-radius: 10px;
+        margin: 20px auto;
+        position: relative;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .logo,
+    .tail-middle,
+    .tail-end {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .logo {
+        width: 550px;
+        height: 420px;
+        background: url(/media/img/firefox/independent/logo-tail.png) right top no-repeat;
+        right: 50%;
+        top: 0;
+        margin-right: -745px;
+        z-index: 4;
+    }
+
+    .tail-middle {
+        width: 415px;
+        height: 460px;
+        background: url(/media/img/firefox/independent/tail-middle.png) left top no-repeat;
+        left: 50%;
+        top: 0;
+        margin-left: -700px;
+        z-index: 3;
+    }
+
+    .tail-end {
+        width: 1185px;
+        height: 770px;
+        background: url(/media/img/firefox/independent/tail-end.png) left top no-repeat;
+        left: 50%;
+        top: 112px;
+        margin-left: -745px;
+        z-index: 2;
+    }
+}
+
+
+
+/*-------------------------------------------------------------------------*/
+// @Tablet Layout: 760px
+@media only screen and (min-width: @breakTablet) and (max-width: @breakDesktop) {
+
+    #fx10-splash {
+        min-height: 670px;
+
+        .main-title {
+            font-size: 60px;
+        }
+
+        .video {
+            width: 640px;
+            height: 357px;
+        }
+
+        .logo {
+            width: 413px;
+            height: 315px;
+            background-size: 413px 315px;
+            margin-right: -580px;
+        }
+
+        .tail-middle {
+            width: 311px;
+            height: 345px;
+            background-size: 311px 345px;
+            margin-left: -520px;
+        }
+
+        .tail-end {
+            width: 889px;
+            height: 578px;
+            background-size: 889px 578px;
+            top: 170px;
+            margin-left: -640px;
+        }
+    }
+
+}
+
+
+
+/*-------------------------------------------------------------------------*/
+// @Mobile Layout: 320px
+@media only screen and (max-width: @breakTablet) {
+
+    #fx10-splash {
+        min-height: 0;
+        padding-top: 160px;
+        min-height: 0;
+
+        .container {
+            width: 100%;
+        }
+
+        .main-title {
+            font-size: 48px;
+            width: @widthMobile;
+            margin-top: 60px;
+        }
+
+        .video {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        .logo {
+            width: 320px;
+            height: 220px;
+            left: 50%;
+            top: -20px;
+            margin-left: -160px;
+            background-size: 280px 214px;
+            background-position: 40px bottom;
+        }
+
+        .tail-middle,
+        .tail-end {
+            display: none;
+        }
+    }
+
+}
+
+
+
+/*-------------------------------------------------------------------------*/
+// @Wide mobile Layout: 480px
+@media only screen and (min-width: @breakMobileLandscape) and (max-width: @breakTablet) {
+
+    #fx10-splash {
+        .main-title {
+            width: @widthMobileLandscape;
+        }
+    }
+
+}
