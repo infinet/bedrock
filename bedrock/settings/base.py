@@ -237,6 +237,9 @@ MINIFY_BUNDLES = {
             'css/base/mozilla-modal.less',
             'css/firefox/firstrun.less',
         ),
+        'firefox_developer_firstrun': (
+            'css/firefox/dev-firstrun.less',
+        ),
         'nightly_firstrun': (
             'css/firefox/nightly_firstrun.less',
         ),
@@ -580,6 +583,10 @@ MINIFY_BUNDLES = {
         'firefox_firstrun': (
             'js/base/mozilla-modal.js',
             'js/firefox/firstrun/firstrun.js',
+        ),
+        'firefox_developer_firstrun': (
+            'js/firefox/australis/australis-uitour.js',
+            'js/firefox/dev-firstrun.js',
         ),
         'firefox_new': (
             'js/libs/socialshare.min.js',
