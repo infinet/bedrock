@@ -588,7 +588,6 @@ MINIFY_BUNDLES = {
         'firefox_developer_firstrun': (
             'js/firefox/australis/australis-uitour.js',
             'js/base/mozilla-modal.js',
-            'js/libs/jquery.fitvids.js',
             'js/firefox/dev-firstrun.js',
         ),
         'firefox_new': (
